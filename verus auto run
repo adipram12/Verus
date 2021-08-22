@@ -1,0 +1,19 @@
+
+verus-auto-armbian
+Script Autorun miner verush coin in Armbian
+
+How to install
+
+Open the armbian terminal.
+Enter the command below
+wget -L https://github.com/adipramono404/massa-node-run/blob/main/miner.sh
+edit the miner.sh file that was downloaded earlier.
+nano miner.sh
+wallet = replace with your wallet address verus
+workername = the name of the worker to be used. Example: node-01
+Save and quit. By pressing the CTRL + X key, press the Y key and enter.
+type the command below in the terminal, to edit crontab
+crontab -e
+Add the script below
+@reboot bash /root/miner.sh > /root/miner.log 2>&1
+Save and quit. By pressing the CTRL + X key, press the Y key and enter.
